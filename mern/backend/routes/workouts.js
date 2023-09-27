@@ -1,12 +1,11 @@
 const express = require('express');
+const getWorkout = require("../controllers/workoutController");
 
 //the express router
 const router = express.Router();
 
 //get all workouts
-router.get('/', (req, res) => {
-    res.json({msg: "Get all workouts"});
-});
+router.get('/', getWorkout);
 
 //get a single workout
 router.get('/:id', (req, res) => {
